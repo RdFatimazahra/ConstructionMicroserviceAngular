@@ -13,6 +13,8 @@ import { DashbordComponent } from './dashbord/dashbord/dashbord.component';
 import { ListProjetsComponent } from './projets/List-projet/list-projets/list-projets.component';
 import { HttpClientModule } from '@angular/common/http';
 import { JwtHelperService ,JWT_OPTIONS } from '@auth0/angular-jwt';
+import { TacheListComponent } from './taches/tache-list/tache-list.component';
+import { TacheFormComponent } from './taches/tache-form/tache-form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { JwtHelperService ,JWT_OPTIONS } from '@auth0/angular-jwt';
     EditProjetComponent,
     LoginComponent,
     DashbordComponent,
-    ListProjetsComponent
+    ListProjetsComponent,
+    TacheListComponent,
+    TacheFormComponent
   ],
   imports: [
     ReactiveFormsModule,
