@@ -9,8 +9,10 @@ import { AddProjetComponent } from './projets/add-projet/add-projet/add-projet.c
 import { EditProjetComponent } from './projets/add-projet/edit-projet/edit-projet.component';
 import { LoginComponent } from './auth/login/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { DashbordComponent } from './dashbord/dashbord/dashbord.component';
+import { ListProjetsComponent } from './projets/List-projet/list-projets/list-projets.component';
+import { HttpClientModule } from '@angular/common/http';
+import { JwtHelperService ,JWT_OPTIONS } from '@auth0/angular-jwt';
 
 @NgModule({
   declarations: [
@@ -18,15 +20,22 @@ import { ReactiveFormsModule } from '@angular/forms';
     ListProjetComponent,
     AddProjetComponent,
     EditProjetComponent,
-    LoginComponent
+    LoginComponent,
+    DashbordComponent,
+    ListProjetsComponent
   ],
   imports: [
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
+    
   ],
-  providers: [],
+  providers: [
+    { provide: JWT_OPTIONS, useValue: JWT_OPTIONS }, 
+    JwtHelperService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
