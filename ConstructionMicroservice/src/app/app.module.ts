@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { JwtHelperService ,JWT_OPTIONS } from '@auth0/angular-jwt';
 import { TacheListComponent } from './taches/tache-list/tache-list.component';
 import { TacheFormComponent } from './taches/tache-form/tache-form.component';
+import { TacheDetailsComponent } from './taches/tache-details/tache-details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TacheFormComponent } from './taches/tache-form/tache-form.component';
     DashbordComponent,
     ListProjetsComponent,
     TacheListComponent,
-    TacheFormComponent
+    TacheFormComponent,
+    TacheDetailsComponent
   ],
   imports: [
     ReactiveFormsModule,

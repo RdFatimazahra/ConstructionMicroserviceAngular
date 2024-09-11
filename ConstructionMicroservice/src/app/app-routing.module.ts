@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login/login.component';
 import { DashbordComponent } from './dashbord/dashbord/dashbord.component';
 import { ListProjetComponent } from './projets/add-projet/list-projet/list-projet.component';
+import { TacheListComponent } from './taches/tache-list/tache-list.component';
+
+
 
 const routes: Routes = [
   { path: 'dashboard', component: DashbordComponent, children: [
@@ -11,6 +14,8 @@ const routes: Routes = [
   ] },
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
+
+  { path: 'taches', component: TacheListComponent },
 ];
 
 @NgModule({

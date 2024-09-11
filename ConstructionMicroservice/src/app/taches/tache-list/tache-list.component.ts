@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { TacheService } from '../../Service/tache.service';
 import { Tache } from '../../interfaces/tache';
 
+
 @Component({
   selector: 'app-tache-list',
   templateUrl: './tache-list.component.html',
-  styleUrls: ['./tache-list.component.css']
+  styleUrls: ['./tache-list.component.scss']
 })
 export class TacheListComponent implements OnInit {
   taches: Tache[] = [];
