@@ -4,15 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ListProjetComponent } from './projets/add-projet/list-projet/list-projet.component';
 import { AddProjetComponent } from './projets/add-projet/add-projet/add-projet.component';
-import { EditProjetComponent } from './projets/add-projet/edit-projet/edit-projet.component';
 import { LoginComponent } from './auth/login/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DashbordComponent } from './dashbord/dashbord/dashbord.component';
-import { ListProjetsComponent } from './projets/List-projet/list-projets/list-projets.component';
 import { HttpClientModule } from '@angular/common/http';
 import { JwtHelperService ,JWT_OPTIONS } from '@auth0/angular-jwt';
+import { RouterModule } from '@angular/router';
+import { ListProjetComponent } from './projets/List-projet/list-projets/list-projets.component';
+import { EditProjetComponent } from './projets/edit-projet/edit-projet/edit-projet.component';
 
 @NgModule({
   declarations: [
@@ -22,14 +22,15 @@ import { JwtHelperService ,JWT_OPTIONS } from '@auth0/angular-jwt';
     EditProjetComponent,
     LoginComponent,
     DashbordComponent,
-    ListProjetsComponent
+    ListProjetComponent
   ],
   imports: [
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule,
     
   ],
   providers: [
