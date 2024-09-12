@@ -1,0 +1,27 @@
+<div class="container my-4">
+    <h2 class="h4 font-weight-bold mb-4">Liste des Taches</h2>
+    <table class="table table-bordered table-hover shadow-sm">
+      <thead class="thead-light">
+        <tr>
+          <th>Description</th>
+          <th>Date Debut</th>
+          <th>Date Fin</th>
+          <th>Statut</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tache of taches">
+          <td>{{ tache.description }}</td>
+          <td>{{ tache.dateDebut }}</td>
+          <td>{{ tache.dateFin }}</td>
+          <td>{{ tache.statut }}</td>
+          <td>
+            <button (click)="deleteTache(tache.id)" class="btn btn-danger btn-sm">Supprimer</button>
+            <a [routerLink]="['/taches/edit', tache.id]" class="btn btn-link text-primary ml-2">Modifier</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
